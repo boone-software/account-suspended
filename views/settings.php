@@ -3,7 +3,7 @@
 
 <?php if (!empty($_POST)) { ?>
     <div class="notice notice-success is-dismissible">
-        <p><?php _e('Changed saved!', $this->slug); ?></p>
+        <p><?php _e('Changes saved!', $this->slug); ?></p>
     </div>
 
 <?php } ?>
