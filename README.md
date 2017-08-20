@@ -1,12 +1,6 @@
-<p align="center">
-  <h1>Account Suspension</h1>
-</p>
+# Account Suspension
 
-<p align="center">
-  A WordPress Plugin
-</p>
-
----
+**A WordPress Plugin**
 
 For use on client websites that use payment plans. Make sure to clarify in any contracts that you *will* use software to disable their website in the event of non-payment.
 
