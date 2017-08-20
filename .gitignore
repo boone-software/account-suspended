@@ -1,0 +1,14 @@
+# Ignore all files starting with .
+.*
+
+# Track this file .gitignore (i.e. do NOT ignore it)
+!.gitignore
+
+# Track .editorconfig file (i.e. do NOT ignore it)
+!.editorconfig
+
+# Track README.md in the root (i.e. do NOT ignore it)
+!README.md
+
+# Ignore all files that start with ~
+~*
