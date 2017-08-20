@@ -1,4 +1,4 @@
-# Account Suspension
+# Account Suspended
 
 **A WordPress Plugin**
 
