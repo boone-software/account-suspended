@@ -50,6 +50,7 @@ add_action('bsas_activate', 'bsas_activate_suspension');
 /**
  * Deactivate account suspension
  *
+ * @since 1.0.0
  * @method bsas_deactivate_suspension
  */
 function bsas_deactivate_suspension()
