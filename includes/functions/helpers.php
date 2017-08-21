@@ -34,7 +34,14 @@ function bsas_activate_suspension()
 
     // Make sure the option exists, first...
     if (get_option('bsas_settings')) {
-        update_option('bsas_settings', ['activated' => 1]);
+        // Get current options
+        $options = Account_Suspended::get_instance()->get_settings();
+
+        // Change activated
+        $options['activated'] = 1;
+
+        // Update settings
+        update_option('bsas_settings', $options);
     }
 }
 
@@ -54,7 +61,14 @@ function bsas_deactivate_suspension()
 
     // Make sure the option exists, first...
     if (get_option('bsas_settings')) {
-        update_option('bsas_settings', ['activated' => 0]);
+        // Get current options
+        $options = Account_Suspended::get_instance()->get_settings();
+
+        // Change activated
+        $options['activated'] = 0;
+
+        // Update settings
+        update_option('bsas_settings', $options);
     }
 }
 
