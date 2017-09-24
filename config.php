@@ -4,7 +4,7 @@
  * Plugin version
  */
 
-define('BSAS_VERSION', '1.0.0');
+define('BSAS_VERSION', '1.0.1');
 
 /**
  * Plugin paths

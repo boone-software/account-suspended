@@ -22,20 +22,24 @@ function bsas_plugin_info($slug)
 /**
  * Activate account suspension
  *
+ * @version 1.0.1
  * @since 1.0.0
  * @method bsas_activate_suspension
  */
 function bsas_activate_suspension()
 {
+    // Get plugin instance
+    $plugin = Account_Suspended::get_instance();
+
     // Soft fail for unauthorized users
-    if (!current_user_can('manage_options')) {
+    if (!$plugin->check_user_role() || !defined('DOING_CRON')) {
         return;
     }
 
     // Make sure the option exists, first...
     if (get_option('bsas_settings')) {
         // Get current options
-        $options = Account_Suspended::get_instance()->get_settings();
+        $options = $plugin->get_settings();
 
         // Change activated
         $options['activated'] = 1;
@@ -50,20 +54,24 @@ add_action('bsas_activate', 'bsas_activate_suspension');
 /**
  * Deactivate account suspension
  *
+ * @version 1.0.1
  * @since 1.0.0
  * @method bsas_deactivate_suspension
  */
 function bsas_deactivate_suspension()
 {
+    // Get plugin instance
+    $plugin = Account_Suspended::get_instance();
+
     // Soft fail for unauthorized users
-    if (!current_user_can('manage_options')) {
+    if (!$plugin->check_user_role() || !defined('DOING_CRON')) {
         return;
     }
 
     // Make sure the option exists, first...
     if (get_option('bsas_settings')) {
         // Get current options
-        $options = Account_Suspended::get_instance()->get_settings();
+        $options = $plugin->get_settings();
 
         // Change activated
         $options['activated'] = 0;

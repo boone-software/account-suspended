@@ -46,10 +46,11 @@ if (!class_exists('Account_Suspended')) {
         /**
          * Plugin version
          *
+         * @version 1.0.1
          * @since 1.0.0
          * @var string
          */
-        protected $version = '1.0.0';
+        protected $version = '1.0.1';
 
         /**
          * Plugin instance (callable)
@@ -210,10 +211,15 @@ if (!class_exists('Account_Suspended')) {
          */
         public function check_update()
         {
+            // Require updater plugin
+            require_once BSAS_PATH . 'updater/plugin-update-checker.php';
+
             // Check for plugin updates
-            if (!version_compare($this->version, BSAS_VERSION, '=')) {
-                self::activate((is_multisite() && is_plugin_active_for_network($this->basename)));
-            }
+            $updater = Puc_v4_Factory::buildUpdateChecker(
+                'https://github.com/boone-software/account-suspended/',
+                __FILE__,
+                'boone-account-suspended'
+            );
         }
 
         /**
