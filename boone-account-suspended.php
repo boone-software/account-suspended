@@ -6,7 +6,7 @@
  * Plugin Name: Account Suspended
  * Plugin URI: https://boone.io
  * Description: Adds a splash page that indicates account suspension.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Boone Software
  * Author URI: https://boone.io
  * Twitter: boonesoftware
@@ -90,7 +90,6 @@ add_action('plugins_loaded', ['Account_Suspended', 'get_instance']);
  */
 
 if (is_admin()) {
-
     // Include relevant classes
     require_once(BSAS_CLASSES_PATH . 'tgm-plugin-activation.php');
     require_once(BSAS_CLASSES_PATH . 'account-suspended-admin.php');

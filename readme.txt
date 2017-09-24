@@ -9,6 +9,7 @@ GitHub Branch: master
 Tags: account, suspended, administrator
 Requires at least: 3.5
 Tested up to: 4.8.1
+Stable tag: 1.0.1
 License: GPL-2.0+
 
 Adds a splash page that indicates account suspension.
@@ -49,6 +50,11 @@ Please give us feedback, contribute and file technical bugs on [GitHub Repo](htt
 This WordPress plugin developed by [Boone Software](https://boone.io) on a code base developed by [Designmodo](http://designmodo.com).
 
 == Changelog ==
+
+= 1.0.1 (08/22/2017) =
+
+* Added ability to customize suspended page title and description
+* Added plugin updater
 
 = 1.0.0 (08/20/2017) =
 
